@@ -1,0 +1,632 @@
+package SelfExercise;
+
+import java.util.Scanner;
+
+public class CoffeeMaker {
+
+	public static void main(String[] args) {
+		
+		
+		int option1;
+		int option2;
+		int option3;
+		int option4;
+		
+		//PRICE SHEET / MENU SHEET
+		//Coffee Sheet
+		int latte			= 14;
+		int japanese		= 13;
+		int affogato		= 19;
+		int cappuccino		= 12;
+		
+		int robusta			= 2;
+		int arabica			= 5;
+		
+		//Tea Sheet
+		
+		int iceTea	 		= 12;
+		int warmTea 		= 10;
+		
+		int sweetTea		= 3;
+		int blackTea		= 2;
+		int lycheeTea		= 5;
+		int strawberryTea	= 6;
+		int	lemonTea		= 8;
+		int earlGrey 		= 5;
+		int greenTea 		= 3;
+		int infusedTea 		= 5;
+		
+			//Tea Infusions
+			int mint				= 3;
+			int sencha				= 5;
+			int floweringTea		= 8;
+		
+		//Non-Coffee sheet
+		int milkshake		= 10;
+		int soda			= 8;
+		int milk			= 9;
+		int mineralWater	= 6;
+		
+			//Milkshake & Milk sheet
+			int chocolate 			= 3;
+			int vanilla				= 3;
+			int oreo				= 5;
+			int strawberry			= 3;
+			
+			//Soda sheet
+			int fanta				= 4;
+			int sprite				= 3;
+			int coca_cola			= 5;
+			
+			//Mineral Water Sheet
+			int big					= 3;
+			int small				= 1;
+			
+		//Food sheet
+		int mainFood		= 2;
+		int snacks	 		= 2;
+		int desserts		= 2;
+		
+			//Main food sheet
+			int friedRice			= 18;
+			int friedNoodle			= 14;
+			int ramen				= 12;
+			int chickenCordonBleu 	= 20;
+			int chickenKatsu		= 17;
+			
+				//Spice Level sheet for main food
+				int spicy				= 2;
+				int verySpicy			= 3;
+			
+			//Snacks Sheet
+			int frenchFries			= 12;
+			int potatoWedges		= 15;
+			int peanuts				= 10;
+				
+				//Types of nuts
+				int cashewNuts			= 10;
+				int onionPeas			= 8;
+				int mixedNuts			= 4;
+				
+			//Desserts Sheet
+			int iceCream			= 4;
+			int pudding				= 3;
+			int mochi				= 5;
+			int applePie			= 4;
+			
+		Scanner OptionScan = new Scanner(System.in);
+		
+		System.out.println("Welcome to Starbucks coffee!");
+		System.out.println("For today's specials we have");
+		System.out.println("1. Coffee 		2. Tea		3. Non-Coffee		4.Foods and snacks");
+		System.out.println("Insert the number of the following beverage you'd like to have");
+		option1 = OptionScan.nextInt();
+		
+		//*******************************************************************************************
+		//		COFFEE LINES
+		//*******************************************************************************************
+		if (option1 == 1) 
+		{
+			System.out.println("What kind of coffee would you like to have ?");
+			System.out.println("1.Latte		2.Japanese		3.Affogato		4.Cappuccino");
+			option2 = OptionScan.nextInt();
+			if (option2 == 1)
+			{
+				System.out.println("You have selected Latte");
+				System.out.println("Select the type of coffee beans you'd like to brew");
+				System.out.println("1.Robusta 		2.Arabica");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1) 
+				{
+					System.out.println("You have selected Robusta coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (latte + robusta));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Arabicca coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (latte + arabica));
+				}
+			}
+			if (option2 == 2) 
+			{
+				System.out.println("You have selected Japanese");
+				System.out.println("Select the type of coffee beans you'd like to brew");
+				System.out.println("1.Robusta 		2.Arabica");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Robusta coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (japanese + robusta));
+					System.out.println("Please proceed to the counter for the payment.");
+				} 
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Arabica coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (japanese + arabica));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}if (option2 == 3) 
+			{
+				System.out.println("You have selected Affogato");
+				System.out.println("Select the type of coffee beans you'd like to brew");
+				System.out.println("1.Robusta 		2.Arabica");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Robusta coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (affogato + robusta));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Arabica coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (affogato + arabica));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}if (option2 == 4) 
+			{
+				System.out.println("You have selected Cappucino");
+				System.out.println("Select the type of coffee beans you'd like to brew");
+				System.out.println("1.Robusta 		2.Arabica");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Robusta coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (cappuccino + robusta));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Arabica coffee");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (cappuccino + arabica));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			
+		//*******************************************************************************************
+		//		TEA LINES
+		//*******************************************************************************************
+		} 
+		if (option1 == 2) 
+		{
+			System.out.println("What kind of Tea would you like to have ?");
+			System.out.println("1.Iced Tea 		2.Warm Tea");
+			option2 = OptionScan.nextInt();
+			if (option2 == 1)
+			{
+				System.out.println("What kind of Iced Tea would you like to have ?");
+				System.out.println("1.Sweet Tea 	2.Black Tea		3.Lychee Tea		4.Strawberry Tea		5.Lemon Tea");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Sweet Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (iceTea + sweetTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Black Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (iceTea + blackTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				} 
+				if (option3 == 3)
+				{
+					System.out.println("You have selected Lychee Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (iceTea + lycheeTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 4)
+				{
+					System.out.println("You have selected Strawberry Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (iceTea + strawberryTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 5)
+				{
+					System.out.println("You have selected Lemon Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (iceTea + lemonTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			if (option2 == 2)
+			{
+				System.out.println("What kind of Warm Tea would you like to have ?");
+				System.out.println("1.Earl Grey 		2.Green Tea			3.Black Tea			4.Sweet Tea			5.Special infused tea");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Earl Grey Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (warmTea + earlGrey));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Green Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (warmTea + greenTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 3)
+				{
+					System.out.println("You have selected Black Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (warmTea + blackTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 4)
+				{
+					System.out.println("You have selected Sweet Tea");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (warmTea + sweetTea));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 5 )
+				{
+					System.out.println("You have selected Infused Tea");
+					System.out.println("What herb would you like to infuse your tea with ?");
+					System.out.println("1.Mint 		2.Sencha		3.Flowering Tea");
+					option4 = OptionScan.nextInt();
+					if (option4 == 1)
+					{
+						System.out.println("You have selected Mint as your infusion herb");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (warmTea + infusedTea + mint));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 2)
+					{
+						System.out.println("You have selected Sencha as your infusion herb");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (warmTea + infusedTea + sencha));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 3)
+					{
+						System.out.println("You have selected Flowering Tea as your infusion herb");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (warmTea + infusedTea + floweringTea));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+				}
+			}
+			
+		//*******************************************************************************************
+		//		NON-COFFEE LINES
+		//*******************************************************************************************
+			
+		} 
+		if (option1 == 3) 
+		{
+			System.out.println("What kind of drink would you like to have ?");
+			System.out.println("1.Milkshake  		2.Soda			3.Milk			4.Mineral Water");
+			option2 = OptionScan.nextInt();
+			if (option2 == 1)
+			{
+				System.out.println("What flavour of Milkshake would you like ?");
+				System.out.println("1.Chocolate 		2.Vanilla		3.Oreo		4.Strawberry");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Chocolate Milkshake");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milkshake + chocolate));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Vanilla Milkshake");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milkshake + vanilla));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 3)
+				{
+					System.out.println("You have selected Oreo Milkshake");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milkshake + oreo));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 4)
+				{
+					System.out.println("You have selected Strawberry Milkshake");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milkshake + strawberry));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			if (option2 == 2)
+			{
+				System.out.println("What type of Soda would you like ?");
+				System.out.println("1.Fanta 		2.Sprite		3.Coca-Cola");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Fanta");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (soda + fanta));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Sprite");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (soda + sprite));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 3)
+				{
+					System.out.println("You have selected Coca-Cola");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (soda + coca_cola));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			if (option2 == 3)
+			{
+				System.out.println("What kind of Milk would you like ?");
+				System.out.println("1.Chocolate Milk 		2.Regular Milk		3.Strawberry Milk");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Chocolate Milk");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milk + chocolate));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Regular Milk");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milk));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 3)
+				{
+					System.out.println("You have selected Strawberry Milk");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (milk + strawberry));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			if (option2 == 4)
+			{
+				System.out.println("What size do you want for your mineral water ?");
+				System.out.println("1.Small 		2.Big");
+				option3 = OptionScan.nextInt();
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Small Mineral Water");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (mineralWater + small));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Large Mineral Water");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (mineralWater + big));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			
+		//*******************************************************************************************
+		//		FOOD LINES
+		//*******************************************************************************************
+			
+		} 
+		if (option1 == 4)
+		{ 
+			System.out.println("What kind of food I can get for you ?");
+			System.out.println("1.Main food  		2.Snacks		3.Desserts");
+			option2 = OptionScan.nextInt();
+			
+			if (option2 == 1)
+			{
+				System.out.println("What would you like us to cook for you ?");
+				System.out.println("1.Fried Rice		2.Fried Noodle		3.Ramen		4.Chicken Cordon Bleu		5.Chicken");
+				option3 = OptionScan.nextInt();
+				
+				if (option3 == 1)
+				{
+					System.out.println("How spicy would you like your Fried Rice to be ?");
+					System.out.println("1.Spicy  		2.Very Spicy		3.Not Spicy");
+					option4 = OptionScan.nextInt();
+					
+					if (option4 == 1)
+					{
+						System.out.println("You have selected Spicy Fried Rice");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + friedRice + spicy));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 2)
+					{
+						System.out.println("You have selected Very Spicy Fried Rice");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + friedRice + verySpicy));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 3)
+					{
+						System.out.println("You have selected Fried Rice");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + friedRice));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+				}
+				if (option3 == 2)
+				{
+					System.out.println("How spicy would you like your Fried Noodle to be ?");
+					System.out.println("1.Spicy  		2.Very Spicy		3.Not Spicy");
+					option4 = OptionScan.nextInt();
+					
+					if (option4 == 1)
+					{
+						System.out.println("You have selected Spicy Fried Noodle");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + friedNoodle + spicy));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 2)
+					{
+						System.out.println("You have selected Very Spicy Fried Noodle");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + friedNoodle + verySpicy));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 3)
+					{
+						System.out.println("You have selected Fried Noodle");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + friedNoodle));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+				}
+				if (option3 == 3)
+				{
+					System.out.println("How spicy would you like your Ramen to be ?");
+					System.out.println("1.Spicy  		2.Very Spicy		3.Not Spicy");
+					option4 = OptionScan.nextInt();
+					
+					if (option4 == 1)
+					{
+						System.out.println("You have selected Spicy Ramen");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + ramen + spicy));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 2)
+					{
+						System.out.println("You have selected Very Spicy Ramen");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + ramen + verySpicy));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 3)
+					{
+						System.out.println("You have selected Ramen");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (mainFood + ramen));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+				}
+				if (option3 == 4)
+				{
+					System.out.println("You have selected Chicken Cordon Bleu");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (mainFood + chickenCordonBleu));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 5)
+				{
+					System.out.println("You have selected Chicken Katsu");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (mainFood + chickenKatsu));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+			if (option2 == 2)
+			{
+				System.out.println("What snack can I get you for today ?");
+				System.out.println("1.French Fries 		2.Potato Wedges 		3.Peanuts");
+				option3 = OptionScan.nextInt();
+				
+				if (option3 == 1)
+				{
+					System.out.println("You have selected French Fries");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (snacks + frenchFries));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Potato Wedges");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (snacks + potatoWedges));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 3)
+				{
+					System.out.println("What kind of peanuts you'd like us to get ?");
+					System.out.println("1.Cashew Nuts  			2.Onion Peas		3.Mixed Nuts");
+					option4 = OptionScan.nextInt();
+					
+					if (option4 == 1)
+					{
+						System.out.println("You have selected Cashew Peanuts");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (snacks + peanuts + cashewNuts));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 2)
+					{
+						System.out.println("You have selected Onion Peas");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (snacks + peanuts + onionPeas));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+					if (option4 == 3)
+					{
+						System.out.println("You have selected Mixed Peanuts");
+						System.out.print("The total payment for it will be ");
+						System.out.println("RM" + (snacks + peanuts + mixedNuts));
+						System.out.println("Please proceed to the counter for the payment.");
+					}
+			}
+		}
+			if (option2 == 3)
+			{
+				System.out.println("What kind of Dessert I can make for you ?");
+				System.out.println("1.Ice Cream  		2.Pudding		3.Mochi			4.Apple Pie");
+				option3 = OptionScan.nextInt();
+				
+				if (option3 == 1)
+				{
+					System.out.println("You have selected Ice Cream");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (iceCream));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 2)
+				{
+					System.out.println("You have selected Pudding");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (pudding));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 3)
+				{
+					System.out.println("You have selected Mochi");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (mochi));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+				if (option3 == 4)
+				{
+					System.out.println("You have selected Apple Pie");
+					System.out.print("The total payment for it will be ");
+					System.out.println("RM" + (applePie));
+					System.out.println("Please proceed to the counter for the payment.");
+				}
+			}
+
+	}
+
+}
+	
+}
