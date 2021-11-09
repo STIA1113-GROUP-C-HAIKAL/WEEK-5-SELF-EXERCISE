@@ -1,0 +1,31 @@
+package SelfExercise;
+
+import java.util.Scanner;
+
+public class BlockStatementExample {
+
+	public static void main(String[] args) {
+
+		Scanner BankScan = new Scanner(System.in); 
+
+		double balance = 5000;
+		double amount;
+		
+		System.out.print("Enter your deposit value : RM");
+		amount = BankScan.nextDouble();
+
+		if (amount <= balance)
+		{
+			balance = balance - amount;
+			System.out.println("Acct new balance = " + balance);
+		}
+		else
+		{
+			double OVERDRAFT_PENALTY = 50;
+			
+			balance = balance - OVERDRAFT_PENALTY;
+			System.out.println("TRANSACTION NOT ALLOWED");
+		}
+	}
+
+}
