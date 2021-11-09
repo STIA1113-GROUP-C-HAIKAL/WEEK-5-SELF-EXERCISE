@@ -1,0 +1,27 @@
+package SelfExercise;
+
+import java.util.Scanner;
+
+public class LogicalOperatorsExample {
+
+	public static void main(String[] args) {
+		double amount;
+		double balance = 5000.00;
+
+		Scanner BankScan = new Scanner (System.in);
+
+		System.out.println("Your current balance is RM" + balance);
+
+		System.out.print("Enter the withdrawal amount here : RM");
+		amount = BankScan.nextDouble();
+
+		//Withdrawal amount of more than RM1000.00 is not allowed
+		if ((amount <= 1000.0) && (amount <= balance))
+		{
+			balance = balance - amount;
+			System.out.println("Acct new balance = RM" + balance);
+		}
+
+		
+	}
+}
