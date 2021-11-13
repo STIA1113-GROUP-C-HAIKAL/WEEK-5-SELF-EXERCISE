@@ -1,0 +1,30 @@
+package SelfExercise;
+
+public class SwitchBreak3 {
+
+	public static void main(String[] args) {
+		int n =1;
+		
+		switch (n)
+		{
+		case 1 :
+			System.out.println("x = " + (n * 10));
+			
+		case 2 :
+			System.out.println("x = " + (n * 10));
+			
+		case 3 :
+			System.out.println("x = " + (n * 10));
+			
+			default:
+				System.out.println("default");
+		}
+	}
+}
+
+
+//OUTPUT
+//x = 10
+//x = 10
+//x = 10
+//default
