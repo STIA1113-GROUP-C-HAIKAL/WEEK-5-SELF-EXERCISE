@@ -1,0 +1,24 @@
+package SelfExercise;
+
+public class SwitchBreak1 {
+
+	public static void main(String[] args) {
+		char ch = 'b';
+		switch (ch)
+		{
+		case 'a' : 
+			System.out.println("ch=a");
+			
+		case 'b' :
+			System.out.println("ch=b");
+			
+		case 'c' :
+			System.out.println("ch=c");
+			
+			default:
+				System.out.println("default");
+		}
+
+	}
+
+}
