@@ -22,3 +22,9 @@ public class SwitchBreak1 {
 	}
 
 }
+
+//OUTPUT
+
+ch=b
+ch=c
+default
