@@ -1,0 +1,258 @@
+package SelfExercise;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class InvestmentPredictions {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		Random rn = new Random();
+		int funds;
+		int option;
+		int years;
+		int successRate = rn.nextInt(100);
+		int currentYear = 2021;
+		
+		int verySuccessfull = rn.nextInt(30);
+		if (verySuccessfull < 14)
+		{
+			verySuccessfull = verySuccessfull + 20;
+		}
+		
+		int successfull = rn.nextInt(20);
+		if (successfull < 5)
+		{
+			successfull = successfull + 10;
+		}
+		
+		int somewhatSuccessfull = rn.nextInt(10);
+		
+		int totallyFailed = rn.nextInt(30);
+		if (totallyFailed < 14)
+		{
+			totallyFailed = totallyFailed + 14;
+		}
+		
+		int failed = rn.nextInt(20);
+		if (failed < 5)
+		{
+			failed = failed + 10;
+		}
+		
+		int somewhatFailed = rn.nextInt(10);
+		
+		
+		System.out.println("Welcome to the investment planner.");
+		System.out.println("This machine will calculate and predict the growth of your investment for the next years.");
+		System.out.println("Disclaimer : Do note that this machine will only accept US Dollars");
+		System.out.print("Insert the funds you would like to use for the asset : $");
+		funds = sc.nextInt();
+		
+		System.out.print("Insert how many years you would like to invest the funds in :");
+		years = sc.nextInt();
+		
+		int verySuccessfullFormula = ((funds + verySuccessfull) * years) / 100;
+		int successfullFormula = ((funds + successfull) * years) / 100;
+		int somewhatSuccessfullFormula = ((funds + somewhatSuccessfull) * years) / 100;
+		
+		int totallyFailedFormula = ((funds - totallyFailed) * years) / 100;
+		int failedFormula = ((funds - failed) * years) / 100;
+		int somewhatFailedFormula = ((funds - somewhatFailed) * years) / 100;
+		
+		
+		
+		System.out.println();
+		System.out.println("You have inserted $" + funds + ", Now pick the company you would like to invest in your funds to");
+		System.out.println("1. Gold Stacks Refinery 		2. Tetra's Multinational Pharmacy 		3. Mayweather's Private Security 	"
+				+ "4. General Motors America 		5. Heckler and Koch's Engineering");
+		option = sc.nextInt();
+		
+		switch(option)
+		{
+		case 1 :
+			
+			System.out.println("You have selected Gold Stacks Refinery."); 
+			if (successRate > 90)
+			{
+				System.out.println("Our system predicts that Gold Stacks Refinery will rocket in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + verySuccessfullFormula) + " On the year " + (years + currentYear));
+			} else if (successRate > 75) 
+			{
+				System.out.println("Our system predicts that Gold Stacks Refinery will increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + successfull) + " On the year " + (years + currentYear));
+			} else if (successRate > 60)
+			{
+				System.out.println("Our system predicts that Gold Stacks Refinery will slowly increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + somewhatSuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + somewhatSuccessfull) + " On the year " + (years + currentYear));
+			} else if (successRate < 15)
+			{
+				System.out.println("Our system predicts that Gold Stacks Refinery will tremendously decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + totallyFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - totallyFailedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 35)
+			{
+				System.out.println("Our system predicts that Gold Stacks Refinery will decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + failedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - failedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 50)
+			{
+				System.out.println("Our system predicts that Gold Stacks Refinery will slowly decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + somewhatFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - somewhatFailedFormula) + " On the year " + (years + currentYear));
+			}
+			break;
+			
+		case 2 : 
+			
+			System.out.println("You have selected Tetra's Multinational Pharmacy."); 
+			if (successRate > 70)
+			{
+				System.out.println("Our system predicts that Tetra's Multinational Pharmacy will rocket in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + verySuccessfullFormula) + " On the year " + (years + currentYear));
+			} else if (successRate > 55) 
+			{
+				System.out.println("Our system predicts that Tetra's Multinational Pharmacy will increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + successfull) + " On the year " + (years + currentYear));
+			} else if (successRate >= 30)
+			{
+				System.out.println("Our system predicts that Tetra's Multinational Pharmacy will slowly increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + somewhatSuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + somewhatSuccessfull) + " On the year " + (years + currentYear));
+			} else if (successRate < 5)
+			{
+				System.out.println("Our system predicts that Tetra's Multinational Pharmacy will tremendously decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + totallyFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - totallyFailedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 15)
+			{
+				System.out.println("Our system predicts that Tetra's Multinational Pharmacy will decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + failedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - failedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 30)
+			{
+				System.out.println("Our system predicts that Tetra's Multinational Pharmacy will slowly decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + somewhatFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - somewhatFailedFormula) + " On the year " + (years + currentYear));
+			}
+			break;
+			
+		case 3 :
+			System.out.println("You have selected Mayweather's Private Security."); 
+			if (successRate > 95)
+			{
+				System.out.println("Our system predicts that Mayweather's Private Security will rocket in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + verySuccessfullFormula) + " On the year " + (years + currentYear));
+			} else if (successRate > 75) 
+			{
+				System.out.println("Our system predicts that Mayweather's Private Security will increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + successfull) + " On the year " + (years + currentYear));
+			} else if (successRate >= 65)
+			{
+				System.out.println("Our system predicts that Mayweather's Private Security will slowly increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + somewhatSuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + somewhatSuccessfull) + " On the year " + (years + currentYear));
+			} else if (successRate < 65)
+			{
+				System.out.println("Our system predicts that Mayweather's Private Security will tremendously decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + totallyFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - totallyFailedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 45)
+			{
+				System.out.println("Our system predicts that Mayweather's Private Security will decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + failedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - failedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 30)
+			{
+				System.out.println("Our system predicts that Mayweather's Private Security will slowly decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + somewhatFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - somewhatFailedFormula) + " On the year " + (years + currentYear));
+			}
+			break;
+			
+		case 4 :
+			System.out.println("You have selected General Motors America."); 
+			if (successRate > 85)
+			{
+				System.out.println("Our system predicts that General Motors America will rocket in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + verySuccessfullFormula) + " On the year " + (years + currentYear));
+			} else if (successRate > 75) 
+			{
+				System.out.println("Our system predicts that General Motors America will increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + successfull) + " On the year " + (years + currentYear));
+			} else if (successRate >= 65)
+			{
+				System.out.println("Our system predicts that General Motors America will slowly increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + somewhatSuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + somewhatSuccessfull) + " On the year " + (years + currentYear));
+			} else if (successRate < 65)
+			{
+				System.out.println("Our system predicts that General Motors America will tremendously decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + totallyFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - totallyFailedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 45)
+			{
+				System.out.println("Our system predicts that General Motors America will decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + failedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - failedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 30)
+			{
+				System.out.println("Our system predicts that General Motors America will slowly decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + somewhatFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - somewhatFailedFormula) + " On the year " + (years + currentYear));
+			}
+			break;
+			
+		case 5 :
+			System.out.println("You have selected Heckler and Koch's Engineering."); 
+			if (successRate > 88)
+			{
+				System.out.println("Our system predicts that Heckler and Koch's Engineering will rocket in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + verySuccessfullFormula) + " On the year " + (years + currentYear));
+			} else if (successRate > 65) 
+			{
+				System.out.println("Our system predicts that Heckler and Koch's Engineering will increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + verySuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + successfull) + " On the year " + (years + currentYear));
+			} else if (successRate >= 50)
+			{
+				System.out.println("Our system predicts that Heckler and Koch's Engineering will slowly increase in the next " + years + " years");
+				System.out.println("Therefore you will gain $" + somewhatSuccessfullFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds + somewhatSuccessfull) + " On the year " + (years + currentYear));
+			} else if (successRate < 50)
+			{
+				System.out.println("Our system predicts that Heckler and Koch's Engineering will tremendously decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + totallyFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - totallyFailedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 35)
+			{
+				System.out.println("Our system predicts that Heckler and Koch's Engineering will decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + failedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - failedFormula) + " On the year " + (years + currentYear));
+			} else if (successRate < 20)
+			{
+				System.out.println("Our system predicts that Heckler and Koch's Engineering will slowly decrease in the next " + years + " years");
+				System.out.println("Therefore you will lose $" + somewhatFailedFormula + " in the next " + years + " years");
+				System.out.println("Your balance will be at $" + (funds - somewhatFailedFormula) + " On the year " + (years + currentYear));
+			}
+			break;
+			
+			default :
+				System.out.println("Your choice is INVALID, please restart the machine."); 
+		}
+
+
+	}
+
+}
