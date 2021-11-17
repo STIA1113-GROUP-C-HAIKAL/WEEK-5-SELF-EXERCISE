@@ -1,0 +1,25 @@
+package ClassExercise;
+
+public class Exercise2New {
+
+	public static void main(String[] args) {
+		int year = 1581;
+		int month = 8;
+		int day = 15;
+
+		System.out.println((year <= 1581) && (month <= 10) && (day <= 15));
+		
+		double d1 = 2.2 + 4.4;
+		double d2 = 6.6;
+		int d3 = 2 + 4;
+		int d4 = 6;
+		System.out.println(d1 == d2);
+		System.out.println(d3 == d4);
+		
+		String s1 = "Azman";
+		String s2 = "Azman";
+		
+		System.out.println(s1 == s2);
+	}
+
+}
