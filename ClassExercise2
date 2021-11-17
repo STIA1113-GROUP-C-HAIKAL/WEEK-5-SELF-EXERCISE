@@ -1,0 +1,25 @@
+package ClassExercise;
+
+public class RelationalLogicalOpTest {
+
+	public static void main(String[] args)
+	{
+		
+		int age = 18;
+		double weight = 71.23;
+		int height = 191;
+		boolean married = false;
+		boolean attached = false;
+		char gender = 'm';
+		
+		System.out.println(!married && !attached && gender == 'm'); 				//True
+		System.out.println(married && (gender == 'f'));								//False
+		System.out.println((height >= 180) && (weight >= 65) && (weight <= 80)); 	//True
+		System.out.println((height >= 180) || (weight >= 90));						//True
+		
+		System.out.println((!married) && (gender == 'm') && ((age >= 21) && (age <= 35)) && (height > 180) && ((weight > 70) && (weight < 80))); 
+	}
+
+}
+
+//Write an expression for all unarried male, age between 21 and 35, with height above 180, and weight between 70 and 80.
